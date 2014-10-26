@@ -31,3 +31,15 @@ foreach ($roots_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+/**
+ * Custom includes
+ */
+//define( 'ACF_LITE', true );
+require_once locate_template('/plugins/roots-rewrites/roots-rewrites.php');    // rewrite asset urls
+require_once locate_template('/plugins/wp-h5bp-htaccess/wp-h5bp-htaccess.php');     // wordpress htaccess according to H5BP
+require_once locate_template('/plugins/soil/soil.php');     // wordpress htaccess according to H5BP
+  add_theme_support('soil-clean-up');
+  add_theme_support('soil-relative-urls');
+  add_theme_support('soil-nice-search');
+  add_theme_support('soil-disable-trackbacks');
